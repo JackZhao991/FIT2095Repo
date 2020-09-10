@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Delete Book</title>
+</head>
+<body>
+    <h1>
+      <a href="/">Home</a>
+      <a href="/newauthor">Add Author</a>
+      <a href="/newbook">Add Book</a>
+      <a href="/listauthors">List Authors</a>
+      <a href="/listbooks">List Books</a>
+      <a href="/updateauthor">Update Author</a>
+      <!-- <a href="/updatebook">Update Book</a> -->
+      <a href="/deletebook">Delete Book</a>
+    </h1>
+
+    <form action="/delete" method="POST">
+        <div class="container">
+          <h1>Delete Book</h1>
+          <hr>
+            
+          <label for="isbn"><b>ISBN</b></label>
+          <input type="text" placeholder="ISBN" name="isbn" id="isbn" required>
+          <hr>
+
+          <button type="submit" class="registerbtn">Delete</button>
+        </div>
+      </form>
+    
+</body>
+</html>

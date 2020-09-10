@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Add Book</title>
+</head>
+<body>
+    <h1>
+      <a href="/">Home</a>
+      <a href="/newauthor">Add Author</a>
+      <a href="/newbook">Add Book</a>
+      <a href="/listauthors">List Authors</a>
+      <a href="/listbooks">List Books</a>
+      <a href="/updateauthor">Update Author</a>
+      <!-- <a href="/updatebook">Update Book</a> -->
+      <a href="/deletebook">Delete Book</a>
+    </h1>
+    <form action="/addbook" method="POST">
+        <div class="container">
+          <h1>Add a New Book</h1>
+          <hr>
+      
+          <label for="title"><b>Title</b></label>
+          <input type="text" placeholder="Title" name="title" id="title" required>
+      
+          <label for="authorID"><b>Author ID</b></label>
+          <input type="text" placeholder="Author ID" name="authorID" id="authorID" required>
+        
+          <label for="isbn"><b>ISBN</b></label>
+          <input type="text" name="isbn" id="isbn" value=<%= randomisbn %> required>
+
+          <label for="dop"><b>Date of Publication</b></label>
+          <input type="date" placeholder="dd/mm/yyyy" name="dop" id="dop" required>
+
+          <label for="summary"><b>Summary</b></label>
+          <input type="text" placeholder="Summary" name="summary" id="summary" required>
+          <hr>
+
+          <button type="submit" class="registerbtn">Add Book</button>
+        </div>
+      </form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Author List</title>
+</head>
+<body>
+    <h1>
+        <a href="/">Home</a>
+        <a href="/newauthor">Add Author</a>
+        <a href="/newbook">Add Book</a>
+        <a href="/listauthors">List Authors</a>
+        <a href="/listbooks">List Books</a>
+        <a href="/updateauthor">Update Author</a>
+        <!-- <a href="/updatebook">Update Book</a> -->
+        <a href="/deletebook">Delete Book</a>
+    </h1>
+    
+    <div class="table">
+        <table id="authors">
+            <h1>Author List</h1>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th># Books</th>
+                <th>State</th>
+                <th>Suburb</th>
+                <th>Street</th>
+                <th>Unit</th>
+                <th>ID</th>
+
+            </tr>
+            <% for ( let i =0; i< authors.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= i+1 %>
+                    </td>
+                    <td>
+                        <%= authors[i].name.firstName %>
+                    </td>
+                    <td>
+                        <%= authors[i].name.lastName %>
+                    </td>
+                    <td>
+                        <%= authors[i].dob %>
+                    </td>
+                    <td>
+                        <%= authors[i].numBooks %>
+                    </td>
+                    <td>
+                        <%= authors[i].address.state %>
+                    </td>
+                    <td>
+                        <%= authors[i].address.suburb %>
+                    </td>
+                    <td>
+                        <%= authors[i].address.street %>
+                    </td>
+                    <td>
+                        <%= authors[i].address.unit %>
+                    </td>
+                    <td>
+                        <%= authors[i]._id %>
+                    </td>
+                </tr>
+                <% }%>
+    </table>
+</div>
+</body>
+</html>

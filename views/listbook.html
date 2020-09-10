@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Book List</title>
+</head>
+<body>
+    <h1>
+        <a href="/">Home</a>
+        <a href="/newauthor">Add Author</a>
+        <a href="/newbook">Add Book</a>
+        <a href="/listauthors">List Authors</a>
+        <a href="/listbooks">List Books</a>
+        <a href="/updateauthor">Update Author</a>
+        <!-- <a href="/updatebook">Update Book</a> -->
+        <a href="/deletebook">Delete Book</a>
+    </h1>
+    <div>
+        <table id="books">
+            <h1>Book List</h1>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Date of Publication</th>
+                <th>Summary</th>
+
+            </tr>
+            <% for ( let i =0; i< books.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= i+1 %>
+                    </td>
+                    <td>
+                        <%= books[i].title %>
+                    </td>
+                    <td>
+                        <%= books[i].author.name.firstName + ' ' + books[i].author.name.lastName %>
+                    </td>
+                    <td>
+                        <%= books[i].isbn %>
+                    </td>
+                    <td>
+                        <%= books[i].published %>
+                    </td>
+                    <td>
+                        <%= books[i].summary %>
+                    </td>
+                </tr>
+                <% }%>
+    </table>
+</div>
+</body>
+</html>

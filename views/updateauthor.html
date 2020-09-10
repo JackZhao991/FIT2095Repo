@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Update Author</title>
+</head>
+<body>
+    <h1>
+      <a href="/">Home</a>
+      <a href="/newauthor">Add Author</a>
+      <a href="/newbook">Add Book</a>
+      <a href="/listauthors">List Authors</a>
+      <a href="/listbooks">List Books</a>
+      <a href="/updateauthor">Update Author</a>
+      <!-- <a href="/updatebook">Update Book</a> -->
+      <a href="/deletebook">Delete Book</a>
+    </h1>
+    
+    <form action="/updatenumbooks" method="POST">
+        <div class="container">
+          <h1>Update Author</h1>
+          <hr>
+            
+          <label for="authorID"><b>Author ID</b></label>
+          <input type="text" placeholder="Author ID" name="authorID" id="authorID" required>
+
+          <label for="numbooks"><b>Number of Books</b></label>
+          <input type="number" placeholder="Number of Books" name="numbooks" id="numbooks" required>
+
+          <hr>
+
+          <button type="submit" class="registerbtn">Update Author</button>
+        </div>
+      </form>
+</body>
+</html>
